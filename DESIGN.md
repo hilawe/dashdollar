@@ -27,7 +27,7 @@ Constraints fixed by the owner: DigiDollar economics frozen (over-collateralizat
 percent by term, terms 30 days to 10 years, no per-position forced liquidation, aggregate dynamic
 collateral adjustment near a 120 percent floor, threshold-signed multi-oracle price). AMENDED by the
 owner 2026-07-19: the maximum term is capped in the 2-to-3-year range, with the exact cap fixed in
-Phase 3 parameter fitting. The trigger was a colleague's quantum-exposure argument against
+Phase 3 parameter fitting. The trigger was @kxcd's quantum-exposure argument against
 decade-long custody on a non-quantum-safe L1, accepted by the owner. This is a requirements
 amendment by the requirements owner, not an architecture change, and the v4 lock stands. Boundary
 strict: peg-in (DIP-2 asset lock) and peg-out (DIP-7 quorum-signed asset unlock) are the only L1

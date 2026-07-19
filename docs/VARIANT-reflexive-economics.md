@@ -1,6 +1,6 @@
 # Variant memo, reflexive economics without time locks
 
-Written 2026-07-19 from a Dash colleague's proposal. STATUS: a sanctioned exploration, not the
+Written 2026-07-19 from a proposal by [@kxcd](https://github.com/kxcd). STATUS: a sanctioned exploration, not the
 architecture of record. DESIGN.md v4 with the frozen (and 2026-07-19 amended) term economics remains
 the design this project builds. This memo scopes the variant so it can be evaluated on equal terms,
 and it graduates to its own design branch only if the exploration produces a full alternative
@@ -8,7 +8,7 @@ architecture worth specifying.
 
 The live conversation on this memo happens in the repository discussions. The economics of this
 variant, and in particular the backer-exit question below, are discussed in
-[discussion #1](https://github.com/hilawe/dashdollar/discussions/1). The same colleague's related
+[discussion #1](https://github.com/hilawe/dashdollar/discussions/1). @kxcd's related
 oracle proposal (masternode-sourced pricing, a separate evaluation item in TODO.md Phase 2) is
 discussed in [discussion #2](https://github.com/hilawe/dashdollar/discussions/2). Decisions reached
 in those threads get folded back into this memo and the build plan, so the memo stays the record
@@ -21,7 +21,7 @@ requirement is not a function of a chosen term but is reflexive to market condit
 the DASH price and the outstanding stablecoin supply. When the token trades above parity, the
 required collateral per token falls, which invites new minting, and the new supply presses the price
 back toward a dollar. The redemption side is unchanged in spirit, holders redeem for underlying
-collateral when the token trades below parity. The colleague's motivating argument against time
+collateral when the token trades below parity. @kxcd's motivating argument against time
 locks is custody exposure, since collateral locked for years on a non-quantum-safe L1 is a standing
 target, and a holder cannot respond to a cryptographic break until the lock expires.
 

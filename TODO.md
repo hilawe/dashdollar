@@ -49,7 +49,7 @@ Reordered 2026-07-18 after review round 2 (see DESIGN.md v3).
       reference implementation so anyone can recompute every authorization.
 - [ ] Oracle committee: per-operator multi-venue aggregation, median of medians, dispersion and
       staleness circuit breakers, signed raw observations on Platform for attributability.
-- [ ] Evaluate the masternode-sourced oracle topology proposed by a Dash colleague (2026-07-19): MNs
+- [ ] Evaluate the masternode-sourced oracle topology proposed by @kxcd (2026-07-19): MNs
       read prices from several exchanges, the network combines them, discards outliers,
       threshold-signs, and commits the result on-chain (coinbase on L1 or an L2 equivalent). Compare
       against the independent-operator committee on bootstrap cost, liveness, attributability, and
