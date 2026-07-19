@@ -65,4 +65,4 @@ harness can run both through identical historical DASH drawdowns with endogenous
 cessation, DASH selling, redemption queue dynamics, and for this variant, backer-exit dynamics) and
 compare parity retention, pool drawdown, and terminal-trigger proximity. The comparison plan is a
 standing item in TODO.md Phase 3. Until those numbers exist, the frozen-template economics remain
-the design of record and this memo remains the honest statement of the alternative.
+the design of record and this memo remains the record of the alternative.

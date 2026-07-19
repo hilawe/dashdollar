@@ -33,16 +33,16 @@ Three things make it distinctive:
   DASH locked behind it, between two and five dollars of DASH depending on how long the backer
   commits, so the dollar target has a cushion against the DASH price falling.
 - It is **non-custodial in intent**. No single party holds the collateral. Collateral is locked on
-  L1 and can only be released by a large quorum of Dash masternodes signing off. The honest limits of
-  that claim are spelled out in Section 6, and they matter.
+  L1 and can only be released by a large quorum of Dash masternodes signing off. The limits of
+  that claim are spelled out in Section 6.
 - It lives **almost entirely on Dash Platform**. The only steps that touch the base chain are moving
   DASH into the system (peg-in) and paying it back out (peg-out). Everything else, the tokens,
   positions, prices, and accounting, lives on L2. This is the "use our own stack" mandate the Dash
   colleagues set for the project.
 
 It is not yet a specification, not yet code, and not yet tested against the real Dash Platform. It is
-an agreed architecture with an honest account of its own trust assumptions and a list of facts that
-must be checked before anyone builds it.
+an agreed architecture with its trust assumptions stated and a list of facts that must be checked
+before anyone builds it.
 
 ## 2. Why it exists
 
@@ -51,7 +51,7 @@ Platform stack rather than bolted on from outside. A dollar-stable token that pe
 with, backed by DASH and governed by Dash's own consensus rather than by a custodian, gives the
 network a stable unit of account without importing an external stablecoin and its trust
 assumptions. The economic shape was borrowed from DigiByte's DigiDollar because that template
-was already worked out, and the job here was to make it fit Dash's two-layer architecture honestly.
+was already worked out, and the job here was to make it fit Dash's two-layer architecture.
 
 ## 3. The one hard rule: base chain for the bridge, application layer for everything else
 
@@ -83,9 +83,9 @@ and that the same authorization is never used twice. It does not re-derive the 2
 The same split runs through the whole system. The mint size, the redemption payout, the pooled
 collateral ratio and its adjustment, the price itself, the periodic share-ledger updates, and the
 terminal-unwind accounting are all computed off-chain by a named signer and submitted as authorized
-actions, while the platform enforces only structure, ownership, uniqueness, and who may act. What
-keeps this honest rather than opaque is that the rules are deterministic and the inputs are
-published, so anyone can recompute any authorized number and challenge a wrong one. Much of the
+actions, while the platform enforces only structure, ownership, uniqueness, and who may act. The
+rules are deterministic and the inputs are published, so anyone can recompute any authorized number
+and challenge a wrong one. Much of the
 design's machinery exists because the numbers are attested and audited after the fact rather than
 proven up front by consensus.
 
@@ -186,7 +186,7 @@ the holders' side. The trigger is objective and the classification of in-flight 
 deterministic function others can recompute and challenge, so the operator has no discretion to favor
 anyone at the end.
 
-## 6. The honest trust model
+## 6. The trust model
 
 This is the part the design takes the most care to state plainly.
 
@@ -210,7 +210,7 @@ not to claim the system is trustless. It was to state where the trust sits and h
 from each role could be.
 
 The design accepts this collective-custodian trust as its working basis for now, and it records a
-better path as future work while being honest that the path is hard. A cryptographic version would
+better path as future work, though the path is hard. A cryptographic version would
 make the base chain release collateral only against proof that a genuine, properly backed redemption
 occurred, using a consensus rule of the kind Dash Core is starting to explore. The catch is that
 proving a mere token burn is not enough, because the party that computes mints could itself create
@@ -241,7 +241,7 @@ process designed to remove single-author blind spots.
 The trajectory of those rounds is the real evidence for calling the architecture settled. Round one
 overturned architecture-level decisions. Round two reworked mechanisms without overturning
 architecture. Round three overturned no architecture decision at all, and every remaining finding was
-a mechanism correction, a completeness gap, or an honesty label. Decreasing depth across rounds, with
+a mechanism correction, a completeness gap, or a claim-strength label. Decreasing depth across rounds, with
 the structure going still by the third, is the signal the process is built to detect. All of that
 review evidence is preserved verbatim as the basis for the "converged" claim.
 
@@ -312,7 +312,7 @@ Rolling those answers up, the project lands in one of three places.
 
 - **Favorable.** The platform enforces atomicity and single-consumption and the base chain proves
   the L2 request. Most of the design proceeds as a consensus-backed system, the redemption and mint
-  safety properties are real guarantees, and the honest trust floor is better than the current
+  safety properties are real guarantees, and the trust floor is better than the current
   assumption. This is the strongest story and it proceeds straight to specification and build.
 - **Mixed, and most likely.** Some protections are enforceable and some are not, and in particular
   the base chain probably only checks the quorum signature. The design still proceeds, but with the
@@ -353,7 +353,7 @@ Assuming the answers are favorable enough to continue, the plan is ordered by ri
 
 ## 10. Where it stands
 
-The architecture is settled and honestly documented, including the places where it has to trust a
+The architecture is settled and documented, including the places where it has to trust a
 quorum rather than pure cryptography. The evidence behind calling it settled is preserved. The next
 move is not code, it is eight questions to the Dash Platform team, because their answers decide
 whether the strong version of this design is buildable, whether the measured version is what ships, or

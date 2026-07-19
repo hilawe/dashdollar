@@ -4,7 +4,7 @@ v4 synthesized 2026-07-18. Lineage: v1 from a clean-room round of five independe
 folded round 1 (BLOCK, BLOCK, APPROVE-WITH-FIXES). v3 folded round 2 (BLOCK, BLOCK, BLOCK,
 APPROVE-WITH-FIXES). Round 3 reviewed v3 with four fresh passes: BLOCK, BLOCK, BLOCK,
 APPROVE-WITH-FIXES. No round-3 finding overturned an architecture decision. All were mechanism
-corrections inside v3 folds, document-completeness defects, or honesty corrections, and they are
+corrections inside v3 folds, document-completeness defects, or claim-strength corrections, and they are
 folded here. FORCED marks clean-room consensus. CHOSEN marks deliberate decisions. VERIFY marks
 feasibility facts to confirm before build.
 
@@ -45,7 +45,7 @@ touchpoints. Platform has data contracts and the native token layer only, no gen
 5. Mints gate on ChainLock finality of the L1 lock.
 6. Oracle: independent operators, several venues each, medians, threshold signature, freshness
    bounds, circuit breakers, attributable signed observations.
-7. The honest trust verdict: L1 validates only the quorum signature on an unlock. The signing path
+7. The trust verdict: L1 validates only the quorum signature on an unlock. The signing path
    is a collective custodian. No threshold-proof non-custodial claim is available or made.
 8. Riskiest assumptions first: bridge mechanics, redemption atomicity, and (added in round 3) the
    apportionment ledger.
@@ -134,7 +134,7 @@ protocol never subordinates exit to position maturities, not that throughput is 
 
 **D4. Binding a mint to its lock.** Unchanged from v3 (single reserve identity, full
 domain-separated signed intent consumed exactly once, mint and abort mutually exclusive on the
-same intent identifier, authorization expiry). A round-3 reviewer honesty correction applies: the
+same intent identifier, authorization expiry). A round-3 reviewer claim-strength correction applies: the
 mutual exclusion is CONDITIONAL on VERIFY 2, and if Platform cannot enforce single-consumption it
 is actuator policy with auditor detection, stated as such.
 
@@ -209,7 +209,7 @@ haircut cap. Volatility scaling remains mint-side only.
 ## Review record and process disposition
 
 Clean-room: five designs. Round 1: BLOCK, BLOCK, APPROVE-WITH-FIXES, folded to v2 (D3 reversal,
-invariant rewrite, custody honesty). Round 2: BLOCK, BLOCK, BLOCK, APPROVE-WITH-FIXES, folded to
+invariant rewrite, custody claim correction). Round 2: BLOCK, BLOCK, BLOCK, APPROVE-WITH-FIXES, folded to
 v3 (atomic redemption intent, full signed mint intent, relational invariant, apportionment
 mechanism, capability matrix). Round 3: BLOCK, BLOCK, BLOCK, APPROVE-WITH-FIXES, folded to this v4
 (commit-before-price redemption, two-queue admission, ledger correction to normalized shares with
@@ -226,7 +226,7 @@ feasibility answers have settled which conditional mechanisms survive. The archi
 LOCKED at v4 as of 2026-07-18. Changes from here are specification work in SPEC.md under
 per-change adversarial review, not further synthesis rounds on this document.
 
-## Honest latency and cost expectations
+## Latency and cost expectations
 
 As v3, plus: admission is deterministic within caps, pricing happens at admission (not at quote
 request), and epoch-batched index settlement means a redemption's position-level accounting may
