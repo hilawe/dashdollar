@@ -6,6 +6,14 @@ the design this project builds. This memo scopes the variant so it can be evalua
 and it graduates to its own design branch only if the exploration produces a full alternative
 architecture worth specifying.
 
+The live conversation on this memo happens in the repository discussions. The economics of this
+variant, and in particular the backer-exit question below, are discussed in
+[discussion #1](https://github.com/hilawe/dashdollar/discussions/1). The same colleague's related
+oracle proposal (masternode-sourced pricing, a separate evaluation item in TODO.md Phase 2) is
+discussed in [discussion #2](https://github.com/hilawe/dashdollar/discussions/2). Decisions reached
+in those threads get folded back into this memo and the build plan, so the memo stays the record
+and the threads stay the conversation.
+
 ## The proposal
 
 Positions carry no time locks. A backer may open or close a position at any time. The collateral
