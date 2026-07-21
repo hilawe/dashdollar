@@ -174,6 +174,19 @@ with a normalized-share ledger that keeps separate running indices for collatera
 position records the index values in force when it entered, so only movement after entry applies
 to it. Updates are batched per period rather than written one event at a time.
 
+**An alternative under evaluation.** A Dash colleague, kxcd, has proposed a different economic
+shape: no time locks at all, with the collateral requirement responding continuously to the DASH
+price and the outstanding supply instead of being set by a chosen term. His motivating argument
+is custody exposure, since collateral locked for years on today's cryptography is a standing
+target, and it is the same argument that brought the maximum term down to the 2-to-3-year range.
+Nearly all of the machinery described above survives under his model unchanged. What changes is
+the pool's capital stability, because a locked backer cannot run and a close-at-will backer can,
+so a crash produces two simultaneous exits instead of one, and any serious version of the
+variant needs a mechanism that slows or prices backer exit under stress. The proposal is scoped
+in the repository as `docs/VARIANT-reflexive-economics.md`, the conversation lives in the
+repository's discussion threads, and the plan (Section 10, item 6) is to settle it by running
+both economic models through the same 27 historical crash episodes rather than by argument.
+
 **The terminal unwind.** If the system is provably insolvent past a public, objective trigger,
 it stops taking new business and pays out an estate in a fixed order. Reversible in-flight
 operations are unwound rather than paid at face value, all token holders are paid pro rata as
